@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* --- HEADER --- */
+
+h1.logo{
+  font-size: 1.3em;
+}
+
+h1.logo a{
+    text-decoration: none;
+    color: #BE6E85;
+}
+
+header .headerWrapper {
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+}
+
+.logoNdHamburger {
+  padding: 10px;
+  width: 100vw;
+  
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width : 850px){
+  header .headerWrapper {
+    flex-flow: column nowrap;
+  }
+}
+
+.material-icons {
+  display: none;
+}
+
+@media (max-width : 850px) {
+  .material-icons {
+    display: flex;
+    font-size: 36px;
+    cursor: pointer;
+  }
+}
+
+nav ul {
+  width: 40vw;
+  
+  margin: 0;
+  padding: 0px;
+  
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+nav ul li {
+  flex-basis: 33.33%;
+  text-align: center;
+}
+
+nav ul li a{
+  width: 100%;
+  display: inline-block;
+  padding: 10px;
+  text-decoration: none;
+  color: #3A3849;
+}
+.open {
+  display: none;
+}
+@media (max-width : 850px) {
+  nav ul{
+    width: 100vw;
+    flex-flow: column nowrap;
+    overflow: hidden;
+    padding: 5px;
+  }
+  
+   ul li a {
+     width: 100%;
+  }
+}
+
+/* --- HEADER ENDS HERE  --- */
+
+/* MAIN */
+
+.mainHeadline {
+  margin: 50px auto;
+  border: 2px solid red;
+  width: 80vw;
+  font-family: 'Playfair Display', serif;
+  font-size: 3em;
+  font-weight: lighter;
+  color: #74718E;
+}
+
+.mainHeadlineItalic {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+}
+
+@media (max-width : 850px) {
+  .mainHeadline {
+    width: 75vw;
+    font-size: 2.5em;
+  }
+}
+
