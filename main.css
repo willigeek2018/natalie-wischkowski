@@ -7,7 +7,9 @@
 /* --- HEADER --- */
 
 h1.logo{
+  margin-left: 40px;
   font-size: 1.3em;
+  
 }
 
 h1.logo a{
@@ -401,7 +403,7 @@ nav ul li a:hover {
 
 .gridMiu > div:nth-child(3) {
   background-image: url(images/miumiu/miumiu_3.png);
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   grid-row: 1 / 4;
   grid-column: 3;
@@ -715,11 +717,55 @@ nav ul li a:hover {
 /* Contact page */
 
 .contacts {
-  border: 2px solid green;
-  display: flex;
-  flex-flow: row wrap;
+  margin: 50px auto;
+  width: 60vw;
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1.3fr 1.3fr;
+  grid-gap: 10px;
 }
 
-.contacts > a {
-  display: inline-block;
+.iconLinks {
+  width: 200px;
+  height: 200px;
+}
+
+.contacts-details {
+  border: 1px solid #BE6E85;
+  padding: 25px;
+  
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  
+  text-decoration: none;
+  color: #BE6E85;
+  
+  transition: all .2s ease-in-out;
+}
+
+.contacts-details:hover {
+  box-shadow: 0 0 20px rgba(0,0,0,.3);
+}
+
+.contact--paragraph {
+  padding: 15px;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+@media (max-width: 870px) {
+  .contacts {
+    width: 80vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .contacts {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4,1fr);
+    width: 90vw;
+  }
 }
