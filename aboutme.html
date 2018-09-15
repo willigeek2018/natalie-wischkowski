@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Creation of a Fashion event to promote, communicate and advertise the launch of the new D&G Devotion bag.">
+  <meta name="description" content="I am passionate about fashion, interested in different cultures and strive to overcome challenges. Based on my experience as a former competitive athlete in fencing, self-reliance, endurance and discipline are main principals in my every-day life.">
     <!-- Google Font : QuickSand -->
   <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
   <!-- Google Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <title>Dolce & Gabbana | Projects | Natalie Portfolio</title>
+  <title>About me | Natalie Portfolio</title>
   <link rel="stylesheet" href="main.css">
 </head>
 
@@ -25,27 +25,66 @@
        <ul>
           <li class="menu-item"><a href="/index.html">Projects</a></li>
           <li class="menu-item"><a href="/aboutme.html">About me</a></li>
-          <li class="menu-item"><a href="">Contact</a></li>
+          <li class="menu-item"><a href="/contact.html">Contact</a></li>
        </ul>
      </nav>
     </div>
   </header>
   
+  <!-- MAIN CONTENT -->
+  
   <main>
    <div class="aboutMe">
-      <div class="aboutMe-image">
+     
+      <div class="aboutMe-image" id="me">
         <img src="images/aboutme/natalieprofile.jpg" alt="">
       </div>
-      <article class="aboutMe-desc">
+      
+      <article class="aboutMe-desc" id="desc">
        <div class="aboutMe-wrapper">
-          <h2 class="projectTitle">I’m Natalie Wischkowski</h2>
-          <h3 class="projectSubtitle"><br>International Marketer & Communication manager</h3>
-          <p>I am passionate about fashion, interested in different cultures and strive to overcome challenges. Based on my experience as a former competitive athlete in fencing, self-reliance, endurance and discipline are main principals in my every-day life. </p>
-          <a href="/images/aboutme/curriculumVitae.pdf" class="cta" target="_blank">View C.V.</a>
+          <h2 class="projectTitle" id="titleP">I’m Natalie Wischkowski</h2>
+          <h3 class="projectSubtitle" id="subtitleP"><br>International Marketer & Communication manager</h3>
+          <p id="paragraphP">I am passionate about fashion, interested in different cultures and strive to overcome challenges. Based on my experience as a former competitive athlete in fencing, self-reliance, endurance and discipline are main principals in my every-day life. </p>
+          <a href="/images/aboutme/curriculumVitae.pdf" class="cta" target="_blank" id="btnP">View C.V.</a>
         </div>
       </article>
+      
     </div>
+    
   </main>
+  
+  <!-- FOOTER -->
+  <footer class="footerHome">
+    <p>© Copyright 2018 - Natalie Wischkowski</p>
+  </footer>
+  
+  <!-- JAVASCRIPT -->
+  
+  <script src="/js/TweenMax.min.js"></script>
+  <script src="/js/EasePack.min.js"></script>
+  <script>
+    
+    // Selecting Elements
+    
+    var photo = document.getElementById('me');
+    var title = document.getElementById('titleP'); 
+    var subtitle = document.getElementById('subtitleP'); 
+    var paragraph = document.getElementById('paragraphP'); 
+    var btn = document.getElementById('btnP');
+    
+    // Creating new Timeline 
+    
+    var tl = new TimelineLite();
+    
+    // Animating selected Element FROM a particular point
+    
+    tl.from(photo, 1.2, {x:-1000, opacity:0, ease: Power4.easeOut})
+      .from(title, 1, {x: 1000, opacity:0, ease:Power4.easeOut}, '-=0.8')
+      .from(subtitle, 1, {x: 1000, opacity:0, ease:Power4.easeOut}, '-=0.8')
+      .from(paragraph, 1, {x: 1000, opacity:0, ease:Power4.easeOut}, '-=0.8')
+      .from(btn, 1, {x: 1000, opacity:0, ease:Power4.easeOut}, '-=0.8');
+    
+  </script>
 </body>
 
 </html>

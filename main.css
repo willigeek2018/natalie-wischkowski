@@ -12,13 +12,19 @@ h1.logo{
   
 }
 
+@media (max-width: 450px) {
+  h1.logo {
+    margin-left: 15px;
+  }
+}
+
 h1.logo a{
     text-decoration: none;
     color: #BE6E85;
 }
 
 header .headerWrapper {
-  border-bottom: 1px solid lightgray;
+  box-shadow: 0 0 5px rgba(0,0,0,.1);
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -82,6 +88,11 @@ nav ul li a:hover {
   color: #BE6E85;
 }
 
+
+nav ul li a:active {
+  color: #BE6E85;
+}
+
 .open {
   display: none;
 }
@@ -129,7 +140,7 @@ nav ul li a:hover {
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  grid-column-gap: 4px;
+  grid-gap: 4px;
 }
 
 @media (max-width : 850px){
@@ -144,8 +155,6 @@ nav ul li a:hover {
   display: inline-block;
   position: relative;
   overflow: hidden;
-  
-  transition: all .2s ease-in-out;
 }
 
 .projectThumbnail:hover .projectDesc {
@@ -159,14 +168,14 @@ nav ul li a:hover {
 
 .thumbnailImage {
   width: 100%;
-  height: auto;
-  
-  transition: all .5s ease-in-out;
+  height: 100%;
 }
 
 .thumbnailImage img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  
+  object-fit: cover;
 }
 
 .projectDesc {
@@ -349,7 +358,7 @@ nav ul li a:hover {
   background-color: #BE6E85;
   color: white;
   
-  transition: all .2s ease-in-out;
+  transition: background-color .2s ease-in-out;
 }
 
 .cta:hover {
@@ -663,16 +672,16 @@ nav ul li a:hover {
 /* About me  */
 
 .aboutMe {
-  padding: 50px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
 }
 
 .aboutMe-image {
-  padding: 50px;
-  max-width: 100%;
+  padding: 50px 50px 50px 50px;
+  max-width: 90%;
   height: auto;
+  background-color: #3A3849;
 }
 
 .aboutMe-image img {
@@ -694,7 +703,7 @@ nav ul li a:hover {
 }
 
 
-@media (max-width : 1050px) {
+@media (max-width : 850px) {
   .aboutMe {
     grid-template-columns: 1fr;
     padding: 25px;
@@ -705,12 +714,19 @@ nav ul li a:hover {
   }
   
   .aboutMe-image {
+    width: 70vw;
     padding: 0px;
-    margin-bottom: 25px;
+    margin: 25px auto;
   }
   
   .aboutMe-desc {
     padding: 10px;
+  }
+}
+
+@media (max-width : 450px) {
+  .aboutMe-image {
+    width: 90vw;
   }
 }
 
@@ -742,8 +758,6 @@ nav ul li a:hover {
   
   text-decoration: none;
   color: #BE6E85;
-  
-  transition: all .2s ease-in-out;
 }
 
 .contacts-details:hover {

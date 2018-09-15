@@ -25,7 +25,7 @@
        <ul>
           <li class="menu-item"><a href="/index.html">Projects</a></li>
           <li class="menu-item"><a href="/aboutme.html">About me</a></li>
-          <li class="menu-item"><a href="">Contact</a></li>
+          <li class="menu-item"><a href="/contact.html">Contact</a></li>
        </ul>
      </nav>
     </div>
@@ -34,14 +34,14 @@
     <!-- MAIN -->
     
   <main class="container">
-    <article class="projectHeader">
-      <h2 class="projectTitle">Dolce & Gabbana</h2>
-      <h3 class="projectSubtitle">Devotion Bag campaign</h3>
-      <div class="stylishLine"></div>
-      <p>Creation of a Fashion event to promote, communicate and advertise the launch of the new “ D & G Devotion bag ”.</p>
+    <article class="projectHeader" id="header">
+      <h2 class="projectTitle" id="title">Dolce & Gabbana</h2>
+      <h3 class="projectSubtitle" id="subtitle">Devotion Bag campaign</h3>
+      <div class="stylishLine" id="line"></div>
+      <p id="paragraph">Creation of a Fashion event to promote, communicate and advertise the launch of the new “ D & G Devotion bag ”.</p>
     </article>
     
-    <div class="gridDolce">
+    <div class="gridDolce" id="grid">
       <div> <!-- Images in Css --></div>
       <div><!-- Images in Css --></div>
       <div><!-- Images in Css --></div>
@@ -61,5 +61,28 @@
     <p>© Copyright 2018 - Natalie Wischkowski</p>
   </footer>
   
+  <!-- JAVASCRIPT -->
+  
+  <script src="/js/TweenMax.min.js"></script>
+  <script src="/js/EasePack.min.js"></script>
+  <script>
+    // Selecting the Elements 
+    var title = document.getElementById('title');
+    var subtitle = document.getElementById('subtitle');
+    var line = document.getElementById('line');
+    var paragraph = document.getElementById('paragraph');
+    var grid = document.getElementById('grid');
+    
+    // Creating a new timeline 
+    var tl = new TimelineLite();
+    
+    // Animating the Elements FROM 
+    tl.from(title, 1, {x:-700, opacity:0, ease:Power4.easeOut})
+      .from(subtitle, 1, {x:-700, opacity:0, ease:Power4.easeOut}, '-=.8')
+      .from(line, 1, {x:-700, opacity:0, ease:Power4.easeOut}, '-=.8')
+      .from(paragraph, 1, {x:-700, opacity:0, ease:Power4.easeOut}, '-=.8')
+      .from(grid, 1, {y:100, opacity:0, ease:Power4.ease}, '-=.8');
+  
+  </script>
 </body>
 </html>

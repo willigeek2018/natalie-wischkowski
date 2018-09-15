@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Creation of a Fashion event to promote, communicate and advertise the launch of the new D&G Devotion bag.">
+  <meta name="description" content="From collection to storytelling strategy for Miu Miu Fw 18 - 19 : ADV concept, catalogue, display & event concept.">
     <!-- Google Font : QuickSand -->
   <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
   <!-- Google Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <title>Dolce & Gabbana | Projects | Natalie Portfolio</title>
+  <title>Miu Miu | Natalie Portfolio</title>
   <link rel="stylesheet" href="main.css">
 </head>
 <body>
@@ -25,7 +25,7 @@
        <ul>
           <li class="menu-item"><a href="/index.html">Projects</a></li>
           <li class="menu-item"><a href="/aboutme.html">About me</a></li>
-          <li class="menu-item"><a href="">Contact</a></li>
+          <li class="menu-item"><a href="/contact.html">Contact</a></li>
        </ul>
      </nav>
     </div>
@@ -35,14 +35,14 @@
     
   <main class="container">
     <article class="projectHeader">
-      <h2 class="projectTitle">Miu Miu</h2>
-      <h3 class="projectSubtitle">ANALYSIS ,CONCEPT &
+      <h2 class="projectTitle" id="title">Miu Miu</h2>
+      <h3 class="projectSubtitle" id="subtitle">ANALYSIS ,CONCEPT &
 STORYTELLING</h3>
-      <div class="stylishLine"></div>
-      <p>From collection to storytelling strategy for Miu Miu Fw 18 - 19 : ADV concept, catalogue, display & event concept.</p>
+      <div class="stylishLine" id="line"></div>
+      <p id="paragraph">From collection to storytelling strategy for Miu Miu Fw 18 - 19 : ADV concept, catalogue, display & event concept.</p>
     </article>
     
-    <div class="gridMiu">
+    <div class="gridMiu" id="grid">
       <div> <!-- Images in Css --></div>
       <div><!-- Images in Css --></div>
       <div><!-- Images in Css --></div>
@@ -62,5 +62,28 @@ STORYTELLING</h3>
     <p>© Copyright 2018 - Natalie Wischkowski</p>
   </footer>
   
+  <!-- JAVASCRIPT -->
+  
+  <script src="/js/TweenMax.min.js"></script>
+  <script src="/js/EasePack.min.js"></script>
+  <script>
+    // Selecting the Elements 
+    var title = document.getElementById('title');
+    var subtitle = document.getElementById('subtitle');
+    var line = document.getElementById('line');
+    var paragraph = document.getElementById('paragraph');
+    var grid = document.getElementById('grid');
+    
+    // Creating a new timeline 
+    var tl = new TimelineLite();
+    
+    // Animating the Elements FROM 
+    tl.from(title, 1, {x:-700, opacity:0, ease:Power4.easeOut})
+      .from(subtitle, 1, {x:-700, opacity:0, ease:Power4.easeOut}, '-=.8')
+      .from(line, 1, {x:-700, opacity:0, ease:Power4.easeOut}, '-=.8')
+      .from(paragraph, 1, {x:-700, opacity:0, ease:Power4.easeOut}, '-=.8')
+      .from(grid, 1, {y:100, opacity:0, ease:Power4.ease}, '-=.8');
+  
+  </script>
 </body>
 </html>

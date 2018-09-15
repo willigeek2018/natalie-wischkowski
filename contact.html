@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Creation of a Fashion event to promote, communicate and advertise the launch of the new D&G Devotion bag.">
+  <meta name="description" content="Feel free to contact me, and let discuss ideas and make them happen.">
     <!-- Google Font : QuickSand -->
   <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
   <!-- Google Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <title>Dolce & Gabbana | Projects | Natalie Portfolio</title>
+  <title>Contact Me | Natalie Portfolio</title>
   <link rel="stylesheet" href="main.css">
 </head>
 
@@ -25,7 +25,7 @@
        <ul>
           <li class="menu-item"><a href="/index.html">Projects</a></li>
           <li class="menu-item"><a href="/aboutme.html">About me</a></li>
-          <li class="menu-item"><a href="">Contact</a></li>
+          <li class="menu-item"><a href="/contact.html">Contact</a></li>
        </ul>
      </nav>
     </div>
@@ -34,22 +34,22 @@
   <main>
     <div class="contacts">
      
-      <a href="tel:+491703239259" class="contacts-details">
+      <a href="tel:+491703239259" class="contacts-details" id="phone">
         <img src="images/contact/00_phone-01.svg" alt="" class="iconLinks">
         <p class="contact--paragraph">+491703239259</p>
       </a>
       
-      <a href="mailto:infos@natalie-wischkowski.com" class="contacts-details"> 
+      <a href="mailto:infos@natalie-wischkowski.com" class="contacts-details" id="mail"> 
         <img src="images/contact/02_email-01.svg" alt="" class="iconLinks">
         <p class="contact--paragraph">infos@natalie-wischkowski.com</p>
       </a>
       
-      <address class="contacts-details">
+      <a href="#" class="contacts-details" id="loc">
         <img src="images/contact/01_address-01.svg" alt="" class="iconLinks">
         <p class="contact--paragraph">Address : Corso San Gattordo, Milano</p>
-      </address>
+      </a>
       
-      <a href="http://www.linkedin.com/" class="contacts-details" target="_blank">
+      <a href="http://www.linkedin.com/" class="contacts-details" target="_blank" id="linkedin">
         <img src="images/contact/03_linkedin-01.svg" alt="" class="iconLinks">
         <p class="contact--paragraph">@natalie-wisckkowski</p>
       </a>
@@ -61,6 +61,26 @@
     <p>© Copyright 2018 - Natalie Wischkowski</p>
   </footer>
   
-  </body>
+  <!-- JAVACRIPT -->
+  
+  <script src="/js/TweenMax.min.js"></script>
+  <script src="/js/EasePack.min.js"></script>
+  <script>
+    // Selecting Elements 
+    var tel = document.getElementById('phone');
+    var email = document.getElementById('mail');
+    var loc = document.getElementById('loc');
+    var social = document.getElementById('linkedin');
+    
+    // Creating new timeline
+    var tl = new TimelineLite();
+    
+    // Animating Elements " FROM " particular point in time.
+    tl.from(tel, 1, {x:-1000, opacity:0, ease:Power4.easeOut})
+      .from(loc, 1, {x:-1000, opacity:0, ease:Power4.easeOut}, '-=.8')
+      .from(email, 1, {x:1000, opacity:0, ease:Power4.easeOut}, '-=.6')
+      .from(social, 1, {x:1000, opacity:0, ease:Power4.easeOut}, '-=.8')
+  </script>
+</body>
   
 </html>
