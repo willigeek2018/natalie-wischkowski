@@ -14,22 +14,31 @@
 </head>
 
 <body>
-       <!-- HEADER -->
+ 
+  <!-- HEADER -->
+  
   <header>
-    <div class="headerWrapper">
-     <div class="logoNdHamburger">
-       <h1 class="logo"><a href="/index.html">Natalie Wischkowski</a></h1>
-       <i class="material-icons">menu</i>
-     </div>
-     <nav>
-       <ul>
-          <li class="menu-item"><a href="/index.html">Projects</a></li>
-          <li class="menu-item"><a href="/aboutme.html">About me</a></li>
-          <li class="menu-item"><a href="/contact.html">Contact</a></li>
-       </ul>
-     </nav>
-    </div>
+   
+    <nav class="navbar">
+        <span id="navbar-toggle">
+            <i class="material-icons">menu</i>
+        </span>
+        <a href="/index.html" id="logo">Natalie Wischkowski</a>
+        <ul id="main-nav">
+            <li>
+                <a href="/index.html" class="nav-links">Projects</a>
+            </li>
+            <li>
+                <a href="/aboutme.html" class="nav-links">About me</a>
+            </li>
+            <li>
+                <a href="/contact.html" class="nav-links">Contact Me</a>
+            </li>
+        </ul>
+    </nav>
   </header>
+  
+  <!-- MAIN CONTENT -->
   
   <main>
     <div class="contacts">
@@ -46,7 +55,7 @@
       
       <a href="#" class="contacts-details" id="loc">
         <img src="images/contact/01_address-01.svg" alt="" class="iconLinks">
-        <p class="contact--paragraph">Address : Corso San Gattordo, Milano</p>
+        <p class="contact--paragraph"> Milano</p>
       </a>
       
       <a href="http://www.linkedin.com/" class="contacts-details" target="_blank" id="linkedin">
@@ -60,6 +69,25 @@
   <footer class="footerHome">
     <p>© Copyright 2018 - Natalie Wischkowski</p>
   </footer>
+  
+    <!-- JAVASCRIPT MENU -->
+  
+    <script type="text/javascript">
+    let mainNav=document.getElementById('main-nav');
+    let navbarToggle=document.getElementById('navbar-toggle');
+
+    navbarToggle.addEventListener('click',function(){
+
+    if(this.classList.contains('active')){
+        mainNav.style.display="none";
+        this.classList.remove('active');
+    }
+    else{
+        mainNav.style.display="flex";
+        this.classList.add('active');
+    }
+  });
+  </script>
   
   <!-- JAVACRIPT -->
   
